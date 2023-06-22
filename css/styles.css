@@ -171,6 +171,13 @@ p {
   background-color: var(--clr-primary-5);
   margin: 0 auto 1.25rem auto;
 }
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.bg-grey {
+  background: var(--clr-grey-10);
+}
 /*
 =============== 
 Navbar
@@ -341,6 +348,34 @@ Hero
 .hero-btn {
   margin-top: 1.25rem;
 }
+.hero-photo {
+  max-width: 25rem;
+  max-height: 28rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .hero-center {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-img {
+    display: block;
+    position: relative;
+  }
+
+  .hero-img::before,
+  .about-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid var(--clr-primary-5);
+    right: -1.5rem;
+    top: 1.5rem;
+    border-radius: var(--radius);
+  }
+}
 /* underline added to globals */
 
 /*
@@ -348,6 +383,35 @@ Hero
 About
 ===============
 */
+.about-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.about-title .underline {
+  margin-left: 0;
+  width: 8rem;
+}
+.about-center {
+  display: grid;
+  gap: 3rem 2rem;
+}
+.about-img {
+  justify-self: center;
+}
+@media screen and (min-width: 992px) {
+  .about-center {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    left: -1.5rem;
+  }
+  .about-info {
+    align-self: center;
+  }
+}
 /* section title added to globals */
 
 /*
@@ -356,6 +420,49 @@ Services
 ===============
 */
 /* small screen layout setup */
+.service {
+  background: var(--clr-white);
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+}
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  /* transition: var(--transition); */
+}
+.service .underline {
+  width: 3rem;
+  height: 0.12rem;
+  transition: var(--transition);
+}
+.service p {
+  transition: var(--transition);
+}
+.service:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.service:hover .underline {
+  background-color: var(--clr-white);
+}
+.service:hover p {
+  color: var(--clr-white);
+}
+@media screen and (min-width: 676px) {
+  .services-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 962px) {
+  .services-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 /* bg-grey in globals */
 
 /*
