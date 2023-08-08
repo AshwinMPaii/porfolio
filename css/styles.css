@@ -796,6 +796,8 @@ Blog
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   visibility: visible;
+  display: grid;
+  grid-template-rows: 160px 1fr 40px;
 }
 .card-front {
   background: var(--clr-white);
@@ -814,7 +816,8 @@ Blog
 }
 /* rest of the style */
 .card-front img {
-  height: 13rem;
+  /* height: 13rem; */
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   border-top-left-radius: var(--radius);
@@ -831,6 +834,9 @@ Blog
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 1rem;
 }
 .card-footer p {
   margin-bottom: 0;
